@@ -22,9 +22,7 @@
 		<div class="footer-bottom">
 			<div class="container clearfix">
 				<div class="pull-left site-info">
-                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tdmacro' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'tdmacro' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-					<?php printf( esc_html__( 'Theme: %1$s by %2$s', 'tdmacro' ), 'tdMacro', '<a href="https://themesharbor.com/" rel="designer">Themes Harbor</a>' ); ?>
+                
 				</div><!-- .site-info -->
                 
 				<div class="pull-right social-links">

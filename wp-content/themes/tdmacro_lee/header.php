@@ -39,16 +39,18 @@
 		</div><!-- .container -->
 	</header><!-- #masthead -->
 
-	<div class="container clearfix">
-		<nav id="site-navigation" class="main-navigation" role="navigation" data-small-nav-title="<?php esc_attr_e( 'Navigation', 'tdmacro' ); ?>">
-		<?php if ( has_nav_menu( 'primary' ) ): ?>
-			<?php wp_nav_menu( array( 'container' => 'ul', 'menu_class' => 'nav-bar clearfix', 'theme_location' => 'primary') ); ?>
-		<?php else: ?>
-			<ul class="list-unstyled nav-bar clearfix">
-				<?php wp_list_pages( 'title_li=' ); ?>
-			</ul><!-- .nav-bar -->
-		<?php endif; ?>
-		</nav><!-- #site-navigation -->
-	</div><!-- .container -->
+	<?php if ( is_front_page() && is_home() ) : ?>
+		<div class="container clearfix">
+			<nav id="site-navigation" class="main-navigation" role="navigation" data-small-nav-title="<?php esc_attr_e( 'Navigation', 'tdmacro' ); ?>">
+			<?php if ( has_nav_menu( 'primary' ) ): ?>
+				<?php wp_nav_menu( array( 'container' => 'ul', 'menu_class' => 'nav-bar clearfix', 'theme_location' => 'primary') ); ?>
+			<?php else: ?>
+				<ul class="list-unstyled nav-bar clearfix">
+					<?php wp_list_pages( 'title_li=' ); ?>
+				</ul><!-- .nav-bar -->
+			<?php endif; ?>
+			</nav><!-- #site-navigation -->
+		</div><!-- .container -->
+	<?php endif; ?>
 
 	<div id="content" class="site-content">

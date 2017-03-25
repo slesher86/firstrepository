@@ -9,13 +9,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-        
-		<?php if ( has_post_thumbnail() ) : ?>
-		<div class="post-thumb">
-			<?php the_post_thumbnail(); ?>
-		</div><!-- .post-thumb -->
-		<?php endif; ?>
-
 		<div class="entry-meta clearfix">
 			<div class="pull-left">
 				<span class="entry-cats"><?php the_category('<span class="comma"> / </span>'); ?></span><!-- .entry-cats -->
@@ -29,11 +22,6 @@
 		</div><!-- .entry-meta -->
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="single-posted-on">
-		  <?php echo tdmacro_single_posted_on(); ?>
-		  <?php edit_post_link( esc_html__( 'Edit', 'tdmacro' ), '<span class="edit-link">', '</span>' ); ?>
-		</div><!-- .single-posted-on -->
 
 	</header><!-- .entry-header -->
 
@@ -49,6 +37,12 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+	<div class="entry-writer">
+		<div class="single-posted-on">
+		  <?php echo tdmacro_single_posted_on(); ?>
+		  <?php edit_post_link( esc_html__( 'Edit', 'tdmacro' ), '<span class="edit-link">', '</span>' ); ?>
+		</div><!-- .single-posted-on -->
+	</div><!-- .entry-writer -->
 
 	<?php the_tags( '<div class="entry-tags">', ' ', '</div><!-- .entry-tags -->' ); ?>
 
