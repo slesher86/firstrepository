@@ -218,3 +218,15 @@ require get_template_directory() . '/inc/custom-colors.php';
  * Load Dashboard help file.
  */
 require get_template_directory() . '/inc/help/helper.php';
+
+
+/*CUSTOM＿LEE*/
+/**
+ * 管理ページにコンテンツ管理ページを登録するための記述
+ */
+add_action('admin_menu', 'content_control_menu');
+
+function content_control_menu() {
+	add_menu_page('scraping other site content', 'scraping other site contente', 'manage_options','/dev_plugin/scraping.php');
+}
+
